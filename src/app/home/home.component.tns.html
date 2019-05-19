@@ -1,0 +1,74 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <ActionBar [title]="title"></ActionBar> -->
+<ActionBar class="action-bar">
+    <GridLayout columns="*,*" width="100%" class="action-bar-inner">
+        <Label
+                col="0"
+                textAlignment="center"
+                horizontalAlignment="left"
+                class="logo">
+        </Label>
+        <Label text="&#xf0c9;"
+               col="1"
+               (tap)="onDrawerButtonTap()"
+               textAlignment="center"
+               horizontalAlignment="right"
+               class="btn-nav fa fa-bars">
+        </Label>
+    </GridLayout>
+</ActionBar>
+<GridLayout columns="*" rows="250, *" width="100%">
+    <WebView src="{{liveBox}}" row="0" col="0" backgroundColor="red"></WebView>
+    <TabView
+            id="tabViewContainer"
+            row="1"
+
+            tabTextFontSize="18"
+            selectedTabTextColor="#212121"
+            androidSelectedTabHighlightColor="#DE373A">
+        <StackLayout *tabItem="{title: 'новости'}" class="test">
+            <GridLayout rows="*">
+                <ScrollView row="0">
+                    <FlexboxLayout
+                            flexDirection="column"
+                            alignItems="flex-start"
+                            class="news-list">
+                        <StackLayout
+                                *ngFor="let list of  newsListMain"
+                                [nsRouterLink]="['/detail']"
+                                class="news-list-wrap"
+                                orientation="vertical">
+                            <Label text="{{list.title}}" textWrap="true" class="news-list-item"></Label>
+                            <FlexboxLayout flexDirection="row" justifyContent="flex-start">
+                                <Label text="{{list.data}}" textWrap="true" class="data-time"></Label>
+                                <Image src="~/assets/img/png/photo-camera.png" class="ic camera"
+                                       horizontalAlignment="left"></Image>
+                            </FlexboxLayout>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </ScrollView>
+            </GridLayout>
+        </StackLayout>
+        <StackLayout *tabItem="{title: 'топ-новости'}">
+            <GridLayout rows="*">
+                <ScrollView row="0">
+                    <FlexboxLayout
+                            flexDirection="column"
+                            [nsRouterLink]="['/detail']"
+                            alignItems="flex-start"
+                            class="news-list">
+                        <StackLayout *ngFor="let list of  newsListMain" class="news-list-wrap" orientation="vertical">
+                            <Label text="{{list.title}}" textWrap="true" class="news-list-item"></Label>
+                            <FlexboxLayout flexDirection="row" justifyContent="flex-start">
+                                <Label text="{{list.data}}" textWrap="true" class="data-time"></Label>
+                                <Image src="~/assets/img/png/photo-camera.png" class="ic camera"
+                                       horizontalAlignment="left"></Image>
+                            </FlexboxLayout>
+                        </StackLayout>
+                    </FlexboxLayout>
+                </ScrollView>
+            </GridLayout>
+
+        </StackLayout>
+    </TabView>
+</GridLayout>

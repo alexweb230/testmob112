@@ -1,0 +1,16 @@
+<ActionBar title="новости" class="action-bar-detail">
+    <NavigationButton
+            android.systemIcon="ic_menu_back"
+            text="Back to ActionBar"
+            [nsRouterLink]="['/home']"></NavigationButton>
+    <Label text="новости" class="title-detail"></Label>
+</ActionBar>
+<GridLayout>
+    <ScrollView>
+        <StackLayout class="news-det-cont">
+            <Image src="~/assets/img/jpg/1.png"></Image>
+            <Label text="22:21 12.03.19"  textWrap="true" class="date"></Label>
+            <Label text="{{test}}"  textWrap="true" class="detail-text"></Label>
+        </StackLayout>
+    </ScrollView>
+</GridLayout>

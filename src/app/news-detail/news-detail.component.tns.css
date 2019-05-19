@@ -1,0 +1,21 @@
+.action-bar-detail {
+    background-color: silver;
+}
+
+.action-bar-detail .title-detail {
+    font-size: 20;
+    color: #212121;
+}
+
+.news-det-cont .detail-text {
+    padding: 10 15;
+    font-size: 16;
+    color: #212121;
+}
+
+.news-det-cont .date {
+    padding-left: 15;
+    color: #888;
+    padding-top: 5;
+    font-size: 17;
+}

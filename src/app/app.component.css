@@ -1,0 +1,113 @@
+ActionBar .action-bar-title {
+    horizontal-align: center;
+
+}
+
+.fa {
+    font-family: "FontAwesome";
+}
+
+ActionBar .action-bar-title {
+    horizontal-align: center;
+}
+
+.sidedrawer.sidedrawer-left {
+    background-color: blue;
+}
+
+.sidedrawer .sidedrawer-header {
+    background-color: #222E50;
+    height: auto;
+}
+
+.sidedrawer .sidedrawer-header .sidedrawer-header-brand {
+    color: red;
+}
+
+.sidedrawer .sidedrawer-header .main-search {
+    background-color: #CFCFCF;
+    border-radius: 30;
+    height: 45;
+}
+
+.sidedrawer .sidedrawer-header .header-action {
+    padding-top: 20;
+}
+
+.sidedrawer .sidedrawer-header .header-action .header-action-logo {
+    background-image: url("~/assets/img/png/logo-menu.png");
+    background-repeat: no-repeat;
+    width: 70;
+    height: 70;
+    background-size: cover;
+}
+
+.sidedrawer .sidedrawer-header .header-action .live {
+    font-size: 30;
+    text-transform: uppercase;
+    color: #CE3330;
+}
+
+.sidedrawer .sidedrawer-header .lang-btns {
+    height: 45;
+    border-radius: 20;
+    background-color: #2D3A59;
+    margin-top: 15;
+    margin-bottom: 15;
+}
+
+.sidedrawer .sidedrawer-header .lang-btns .lang-ua, .sidedrawer .sidedrawer-header .lang-btns .lang-ru {
+    font-size: 18;
+    text-transform: capitalize;
+    color: #000000;
+    padding-left: 20;
+    padding-right: 20;
+    border-right-width: 1;
+    border-right-color: rgba(0, 0, 0, 0.6);
+}
+
+.sidedrawer .sidedrawer-header .lang-btns .lang-ua.active, .sidedrawer .sidedrawer-header .lang-btns .active.lang-ru {
+    color: #FAFBFD;
+}
+
+.sidedrawer .sidedrawer-header .lang-btns .lang-ru {
+    border-right-width: 0;
+}
+
+.sidedrawer .sidedrawer-content {
+    background-color: #222E50;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item {
+    padding-left: 15;
+    border-bottom-width: 1;
+    border-bottom-color: rgba(255, 255, 255, 0.3);
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item Label {
+    font-size: 25;
+    vertical-align: middle;
+    color: #FAFBFD;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item .arr {
+    width: 19;
+    height: 19;
+    background-image: url("~/assets/img/png/arr.png");
+    background-repeat: no-repeat;
+    horizontal-align: left;
+    margin-left: 15;
+    background-size: cover;
+    margin-top: 7;
+
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected {
+    background-color: red;
+}
+
+.sidedrawer .sidedrawer-content .sidedrawer-list-item.selected Label {
+    color: gold;
+}

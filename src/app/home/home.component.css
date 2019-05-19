@@ -1,0 +1,44 @@
+/* Add mobile styles for the component here.  */
+.action-bar {
+    background-color: #E4E4E4;
+}
+.action-bar .action-bar-inner {
+    padding-right: 15;
+}
+.action-bar .action-bar-inner .btn-nav {
+    color: #474747;
+    font-size: 30;
+    padding: 0;
+}
+.action-bar .action-bar-inner .logo {
+    background-image: url('~/assets/img/png/logo.png');
+    background-repeat: no-repeat;
+    width: 96;
+    height: 32;
+    /*background-color: red;*/
+    background-size: cover;
+}
+.news-list {
+    padding: 10;
+}
+.news-list-wrap {
+    border-bottom-width: 1;
+    border-bottom-color: #b2a6a7;
+    padding-bottom: 10;
+}
+.news-list-item {
+    font-size: 16;
+    color: #212121;
+    width: 100%;
+}
+.news-list .ic {
+    margin-left: 15;
+}
+.news-list .ic.camera {
+    width: 24;
+    height: 24;
+}
+TabView StackLayout{
+    font-size: 18;
+}
+

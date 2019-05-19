@@ -1,0 +1,65 @@
+<RadSideDrawer [drawerTransition]="sideDrawerTransition">
+  <GridLayout tkDrawerContent rows="auto, *" class="sidedrawer sidedrawer-left">
+      <StackLayout row="0" class="sidedrawer-header">
+          <DockLayout class="main-search">
+              <SearchBar hint="{{sPlaceHolder}}"
+                         (loaded)="sBLoaded($event)"
+                         (submit)="onSearchSubmit($event)">
+
+              </SearchBar>
+          </DockLayout>
+          <FlexboxLayout class="header-action" justifyContent="space-between" alignItems="center">
+              <Label text="" class="header-action-logo"></Label>
+              <Label text="{{textLive}}" class="live"></Label>
+          </FlexboxLayout>
+          <FlexboxLayout class="lang-btns" justifyContent="center" alignItems="center">
+              <Label text="{{textUA}}" class="lang-ua" [ngClass]="active ? 'active': ''" (tap)="toggleActive()"></Label>
+              <Label  text="{{textRU}}" class="lang-ru"  [ngClass]="activeSibling ? 'active': ''" (tap)="toggleActive()"></Label>
+          </FlexboxLayout>
+      </StackLayout>
+  
+      <ScrollView row="1">
+          <StackLayout class="sidedrawer-content">
+              <GridLayout
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[0]}}"></Label>
+                  <Label col="1"  class="arr" ></Label>
+              </GridLayout>
+              <GridLayout
+
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[1]}}"></Label>
+                  <Label col="1"  class="arr"></Label>
+              </GridLayout>
+              <GridLayout
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[2]}}"></Label>
+                  <Label col="1"  class="arr"></Label>
+              </GridLayout>
+              <GridLayout
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[3]}}"></Label>
+                  <Label col="1"  class="arr"></Label>
+              </GridLayout>
+              <GridLayout
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[4]}}"></Label>
+                  <Label col="1"  class="arr"></Label>
+              </GridLayout>
+              <GridLayout
+                      columns="auto, *"
+                      class="sidedrawer-list-item">
+                  <Label col="0" text="{{navLIst[5]}}"></Label>
+                  <Label col="1"  class="arr"></Label>
+              </GridLayout>
+          </StackLayout>
+      </ScrollView>
+  </GridLayout>
+
+  <page-router-outlet tkMainContent class="page page-content"></page-router-outlet>
+</RadSideDrawer>
